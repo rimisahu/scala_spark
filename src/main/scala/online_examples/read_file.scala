@@ -24,7 +24,12 @@ object read_file extends App{
 
   println("example - 03")
   grade_df.filter(grade_df("Grade") ==="B-").show(false)
-  //count function
+
+
+  //spark sql function
+  println("example - 03")
+  grade_df.createOrReplaceTempView("grade_example")
+  spark.sql("select * from grade_example where Final > 50.0").show(false)
 
 
 }
