@@ -22,8 +22,6 @@ object read_file extends App{
   println("example - 02")
   grade_df.select("Firstname").show(false)
 
-  import spark.implicits._
-
   println("example - 03")
   grade_df.filter(grade_df("Grade") ==="B-").show(false)
   //count function
